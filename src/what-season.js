@@ -3,13 +3,13 @@ const CustomError = require("../extensions/custom-error");
 module.exports = function getSeason(date) {
   if (date === undefined) {
     return 'Unable to determine the time of year!';
-  }
+  } // проверка
 
   if (!date === NaN || date === null) {
     throw new Error();
-  }
+  } // ошибка если дата не числовое значение или null
 
-  const month = date.getMonth();
+  let month = date.getMonth();
   switch (month) {
     case 0:
     case 1:
